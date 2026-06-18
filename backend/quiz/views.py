@@ -156,21 +156,45 @@ class SubmitAnswersView(views.APIView):
         if res_obj.finalized:
             return Response({'error': 'You have already finalized this round.'}, status=status.HTTP_400_BAD_REQUEST)
 
-        # Save submissions
+        # Bulk save submissions to minimize DB queries
+        # 1. Fetch all questions for this round at once
+        round_questions = {q.id: q for q in Question.objects.filter(round=round_obj)}
+        
+        # 2. Fetch existing submissions for this user & round
+        existing_submissions = {
+            sub.question_id: sub 
+            for sub in Submission.objects.filter(user=user, question__round=round_obj)
+        }
+        
+        to_create = []
+        to_update = []
+        
         for ans in answers:
             q_id = ans.get('question_id')
             sel_ans = ans.get('selected_answer')
-            if q_id and sel_ans in ['A', 'B', 'C', 'D']:
-                question_obj = get_object_or_404(Question, id=q_id, round=round_obj)
-                Submission.objects.update_or_create(
-                    user=user,
-                    question=question_obj,
-                    defaults={'selected_answer': sel_ans}
-                )
+            
+            if q_id and sel_ans in ['A', 'B', 'C', 'D'] and q_id in round_questions:
+                if q_id in existing_submissions:
+                    sub_obj = existing_submissions[q_id]
+                    if sub_obj.selected_answer != sel_ans:
+                        sub_obj.selected_answer = sel_ans
+                        to_update.append(sub_obj)
+                else:
+                    to_create.append(Submission(
+                        user=user,
+                        question_id=q_id,
+                        selected_answer=sel_ans
+                    ))
+        
+        if to_create:
+            Submission.objects.bulk_create(to_create)
+        if to_update:
+            Submission.objects.bulk_update(to_update, ['selected_answer'])
 
         # If final submission, calculate score & freeze
         if is_final:
             questions = Question.objects.filter(round=round_obj)
+            # Re-fetch submissions to ensure we have the latest database state for scoring
             submissions = Submission.objects.filter(user=user, question__round=round_obj)
             sub_map = {sub.question_id: sub.selected_answer for sub in submissions}
 
@@ -251,21 +275,46 @@ class AdminEndRoundView(views.APIView):
         round_obj.status = 'COMPLETED'
         round_obj.save()
 
-        # Auto-score any submissions that weren't finalized yet
-        users = User.objects.filter(is_staff=False)
+        # O(1) query-based auto-scoring for all non-finalized participants
         questions = Question.objects.filter(round=round_obj)
-        
-        for user in users:
-            # Check if this user had active submissions
-            submissions = Submission.objects.filter(user=user, question__round=round_obj)
-            if submissions.exists():
-                res_obj, created = Result.objects.get_or_create(user=user, round=round_obj)
-                if not res_obj.finalized:
-                    sub_map = {sub.question_id: sub.selected_answer for sub in submissions}
-                    score = sum(1 for q in questions if sub_map.get(q.id) == q.correct_answer)
-                    res_obj.score = score
-                    res_obj.finalized = True
-                    res_obj.save()
+        q_correct = {q.id: q.correct_answer for q in questions}
+
+        # 1. Fetch all submissions for this round grouped by user
+        all_submissions = Submission.objects.filter(question__round=round_obj)
+        from collections import defaultdict
+        user_subs = defaultdict(list)
+        for sub in all_submissions:
+            user_subs[sub.user_id].append(sub)
+
+        # 2. Fetch all existing results for this round
+        existing_results = {res.user_id: res for res in Result.objects.filter(round=round_obj)}
+
+        to_create_results = []
+        to_update_results = []
+
+        # 3. Process each user who has submissions
+        users_with_subs = User.objects.filter(id__in=user_subs.keys(), is_staff=False)
+        for user in users_with_subs:
+            subs = user_subs[user.id]
+            res_obj = existing_results.get(user.id)
+            
+            if not res_obj:
+                res_obj = Result(user=user, round=round_obj, score=0, finalized=False)
+            
+            if not res_obj.finalized:
+                score = sum(1 for sub in subs if sub.selected_answer == q_correct.get(sub.question_id))
+                res_obj.score = score
+                res_obj.finalized = True
+                
+                if res_obj.pk:
+                    to_update_results.append(res_obj)
+                else:
+                    to_create_results.append(res_obj)
+
+        if to_create_results:
+            Result.objects.bulk_create(to_create_results)
+        if to_update_results:
+            Result.objects.bulk_update(to_update_results, ['score', 'finalized'])
 
         return Response({
             'message': f'{round_obj.name} ended. All pending submissions auto-finalized.',
