@@ -4,10 +4,10 @@ import xml.etree.ElementTree as ET
 import re
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from quiz.models import Round, Question
+from quiz.models import User, Round, Question
 
 class Command(BaseCommand):
-    help = 'Seeds initial rounds and questions from docx files if database is empty.'
+    help = 'Seeds initial rounds, questions, and superuser from docx files/env vars if database is empty.'
 
     def extract_docx_text(self, docx_path):
         if not os.path.exists(docx_path):
@@ -26,7 +26,33 @@ class Command(BaseCommand):
         return [t for t in texts if t]
 
     def handle(self, *args, **options):
-        # Only seed if no questions exist
+        # 1. Handle Superuser Seeding
+        if not User.objects.filter(is_superuser=True).exists():
+            admin_password = os.environ.get('ADMIN_PASSWORD')
+            if admin_password:
+                admin_reg = os.environ.get('ADMIN_REGISTER_NO', 'admin')
+                admin_email = os.environ.get('ADMIN_EMAIL', 'admin@college.edu')
+                admin_name = os.environ.get('ADMIN_NAME', 'Admin Organizer')
+                admin_dept = os.environ.get('ADMIN_DEPARTMENT', 'Admin')
+                
+                self.stdout.write(f"Creating superuser '{admin_reg}'...")
+                try:
+                    User.objects.create_superuser(
+                        register_no=admin_reg,
+                        password=admin_password,
+                        email=admin_email,
+                        name=admin_name,
+                        department=admin_dept
+                    )
+                    self.stdout.write(self.style.SUCCESS(f"Superuser '{admin_reg}' created successfully."))
+                except Exception as e:
+                    self.stderr.write(self.style.ERROR(f"Error creating superuser: {e}"))
+            else:
+                self.stderr.write(self.style.WARNING("ADMIN_PASSWORD environment variable not set. Skipping superuser creation."))
+        else:
+            self.stdout.write("Superuser already exists. Skipping.")
+
+        # 2. Handle Questions & Rounds Seeding
         if Question.objects.count() > 0:
             self.stdout.write(self.style.SUCCESS('Questions already exist in database. Skipping seeding.'))
             return
