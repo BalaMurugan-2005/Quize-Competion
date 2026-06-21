@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiz Backend — Load Test Report</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{font-family:'Outfit',sans-serif;background:#080d13;color:#dde4ed;margin:0}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .card{background:rgba(17,24,39,.7);border:1px solid rgba(255,255,255,.07);
+         border-radius:1.25rem;backdrop-filter:blur(14px);
+         box-shadow:0 12px 48px rgba(0,0,0,.45)}
+  .grad-text{background:linear-gradient(135deg,#34d399,#22d3ee,#818cf8);
+              -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .ping-dot{width:10px;height:10px;border-radius:50%;background:#34d399;
+             animation:ping 1.2s cubic-bezier(0,0,.2,1) infinite}
+  @keyframes ping{75%,100%{transform:scale(2);opacity:0}}
+  table{border-collapse:collapse;width:100%}
+  th,td{padding:.65rem 1rem;text-align:left;vertical-align:middle;white-space:nowrap}
+  tr:hover td{background:rgba(255,255,255,.03)}
+  .badge{display:inline-block;padding:.15rem .55rem;border-radius:.4rem;
+          font-size:.7rem;font-weight:700}
+  .ok-bar{height:6px;border-radius:3px;background:linear-gradient(90deg,#34d399,#22d3ee)}
+  .fail-bar{height:6px;border-radius:3px;background:linear-gradient(90deg,#f87171,#fb923c)}
+</style>
+</head>
+<body class="min-h-screen pb-16">
+
+<!-- ── Header ──────────────────────────────────────────────────────────── -->
+<header style="border-bottom:1px solid rgba(255,255,255,.07);background:rgba(8,13,19,.9);
+               backdrop-filter:blur(10px)" class="sticky top-0 z-50 px-8 py-4 flex justify-between items-center">
+  <div class="flex items-center gap-3">
+    <div class="ping-dot"></div>
+    <span class="text-2xl font-extrabold grad-text">QuizBackend · SpeedReport</span>
+  </div>
+  <span class="mono text-sm text-gray-400">2026-06-19 19:15:47</span>
+</header>
+
+<main class="max-w-7xl mx-auto px-6 mt-8 space-y-8">
+
+  <!-- ── Config banner ─────────────────────────────────────────────────── -->
+  <div class="card p-6 flex flex-wrap gap-6 justify-between items-center">
+    <div>
+      <p class="text-xs text-emerald-400 uppercase tracking-wider mb-1">Target</p>
+      <p class="mono text-xl font-bold text-white">https://quiz-backend-h7sq.onrender.com</p>
+    </div>
+    <div class="flex gap-10 flex-wrap">
+      <div><p class="text-xs text-gray-400">Virtual Users</p>
+           <p class="mono text-lg font-semibold text-white">60 VUs</p></div>
+      <div><p class="text-xs text-gray-400">Elapsed</p>
+           <p class="mono text-lg font-semibold text-white">158.52 s</p></div>
+      <div><p class="text-xs text-gray-400">Total Requests</p>
+           <p class="mono text-lg font-semibold text-white">126</p></div>
+      <div><p class="text-xs text-gray-400">Throughput</p>
+           <p class="mono text-lg font-semibold text-white">0.79 req/s</p></div>
+    </div>
+  </div>
+
+  <!-- ── KPI cards ─────────────────────────────────────────────────────── -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+    <!-- Success rate -->
+    <div class="card p-6">
+      <p class="text-sm text-gray-400 mb-2">Success Rate</p>
+      <p class="mono text-4xl font-extrabold text-emerald-400">36.5%</p>
+      <div class="mt-4 bg-gray-800 rounded-full overflow-hidden" style="height:6px">
+        <div class="ok-bar" style="width:36.5%"></div>
+      </div>
+    </div>
+    <!-- Throughput -->
+    <div class="card p-6">
+      <p class="text-sm text-gray-400 mb-2">Throughput</p>
+      <p class="mono text-4xl font-extrabold text-sky-400">0.79</p>
+      <p class="text-xs text-gray-500 mt-4">requests / second</p>
+    </div>
+    <!-- Avg latency -->
+    <div class="card p-6">
+      <p class="text-sm text-gray-400 mb-2">Avg Latency</p>
+      <p class="mono text-4xl font-extrabold text-amber-400">14741</p>
+      <p class="text-xs text-gray-500 mt-4">milliseconds (all endpoints)</p>
+    </div>
+    <!-- Failures -->
+    <div class="card p-6">
+      <p class="text-sm text-gray-400 mb-2">Failed Requests</p>
+      <p class="mono text-4xl font-extrabold text-rose-500">80</p>
+      <p class="text-xs text-gray-500 mt-4">HTTP ≥ 400 or timeouts</p>
+    </div>
+  </div>
+
+  <!-- ── Charts ────────────────────────────────────────────────────────── -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="card p-6">
+      <p class="font-bold text-white mb-4">Latency — Avg vs P95 (ms)</p>
+      <div style="height:280px"><canvas id="chartLatency"></canvas></div>
+    </div>
+    <div class="card p-6">
+      <p class="font-bold text-white mb-4">Request Share by Endpoint</p>
+      <div style="height:280px"><canvas id="chartDist"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ── Detailed table ────────────────────────────────────────────────── -->
+  <div class="card overflow-hidden">
+    <div class="px-6 py-4 border-b border-gray-800">
+      <p class="font-bold text-white text-lg">Endpoint Performance Details</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table>
+        <thead>
+          <tr style="background:rgba(255,255,255,.04);font-size:.75rem;color:#6b7280;text-transform:uppercase">
+            <th>Endpoint</th><th>Method</th><th class="text-center">OK / Fail</th>
+            <th class="text-center">Rate %</th><th class="text-right">Min</th>
+            <th class="text-right">Avg</th><th class="text-right">Median</th>
+            <th class="text-right">P90</th><th class="text-right">P95</th>
+            <th class="text-right">Max</th><th>Status Codes</th>
+          </tr>
+        </thead>
+        <tbody id="tbody" style="font-size:.85rem"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── Errors ─────────────────────────────────────────────────────────── -->
+  <div id="errSection" class="card p-6 hidden">
+    <p class="text-rose-400 font-bold text-lg mb-4">⚠ Error Log (last 60)</p>
+    <div style="max-height:280px;overflow-y:auto">
+      <table style="font-size:.78rem">
+        <thead>
+          <tr style="color:#6b7280">
+            <th>Time</th><th>Endpoint</th><th>Method</th><th>Code</th><th>Message</th>
+          </tr>
+        </thead>
+        <tbody id="errTbody" class="mono"></tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<script>
+const ROWS   = [{"ep": "api/login/ [admin]", "method": "POST", "total": 1, "ok": 1, "fail": 0, "rate": 100.0, "min": 2124.3577000000187, "avg": 2124.3577000000187, "med": 2124.3577000000187, "p90": 2124.3577000000187, "p95": 2124.3577000000187, "max": 2124.3577000000187, "codes": {"200": 1}}, {"ep": "api/winners/", "method": "GET", "total": 1, "ok": 1, "fail": 0, "rate": 100.0, "min": 451.14269999976386, "avg": 451.14269999976386, "med": 451.14269999976386, "p90": 451.14269999976386, "p95": 451.14269999976386, "max": 451.14269999976386, "codes": {"200": 1}}, {"ep": "api/leaderboard/?round_id=1", "method": "GET", "total": 1, "ok": 1, "fail": 0, "rate": 100.0, "min": 1458.2963999996537, "avg": 1458.2963999996537, "med": 1458.2963999996537, "p90": 1458.2963999996537, "p95": 1458.2963999996537, "max": 1458.2963999996537, "codes": {"200": 1}}, {"ep": "api/current-round/", "method": "GET", "total": 1, "ok": 1, "fail": 0, "rate": 100.0, "min": 318.49370000009003, "avg": 318.49370000009003, "med": 318.49370000009003, "p90": 318.49370000009003, "p95": 318.49370000009003, "max": 318.49370000009003, "codes": {"200": 1}}, {"ep": "api/results/", "method": "GET", "total": 1, "ok": 1, "fail": 0, "rate": 100.0, "min": 308.4438999999293, "avg": 308.4438999999293, "med": 308.4438999999293, "p90": 308.4438999999293, "p95": 308.4438999999293, "max": 308.4438999999293, "codes": {"200": 1}}, {"ep": "api/notifications/", "method": "GET", "total": 1, "ok": 1, "fail": 0, "rate": 100.0, "min": 304.3053000001237, "avg": 304.3053000001237, "med": 304.3053000001237, "p90": 304.3053000001237, "p95": 304.3053000001237, "max": 304.3053000001237, "codes": {"200": 1}}, {"ep": "api/register/", "method": "POST", "total": 60, "ok": 40, "fail": 20, "rate": 66.66666666666666, "min": 29924.117399999886, "avg": 52999.50819166665, "med": 55960.76630000016, "p90": 68585.66100000008, "p95": 72378.02179999971, "max": 81055.8501999999, "codes": {"0": 20, "201": 40}}, {"ep": "api/login/", "method": "POST", "total": 60, "ok": 0, "fail": 60, "rate": 0.0, "min": 54744.74520000012, "avg": 59963.87475, "med": 60023.084599999944, "p90": 60238.899500000116, "p95": 60252.831400000105, "max": 60870.846199999956, "codes": {"401": 2, "0": 58}}];
+const ERRORS = [{"time": "19:13:46", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:13:46", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:13:46", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:47", "ep": "api/register/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:49", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:50", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:51", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:53", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:54", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:55", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:57", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:58", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:14:59", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:01", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:02", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:03", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:05", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:06", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:07", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:08", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:10", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:11", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:12", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:14", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:15", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:16", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:18", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:19", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:20", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:22", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:23", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:25", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:26", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:28", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:30", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:31", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:33", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:34", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:35", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:37", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:38", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:40", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}, {"time": "19:15:43", "ep": "api/login/", "method": "POST", "code": 0, "msg": ""}];
+
+/* ── Populate table ─────────────────────────────────────────────────────── */
+const tbody = document.getElementById('tbody');
+ROWS.forEach(r => {
+  const rc = r.rate >= 95 ? '#34d399' : r.rate >= 80 ? '#fbbf24' : '#f87171';
+  const codes = Object.entries(r.codes).map(([k,v])=>
+    `<span class="badge" style="background:rgba(99,102,241,.2);color:#a5b4fc">
+      ${k}×${v}</span>`).join(' ');
+  const tr = document.createElement('tr');
+  tr.style.borderTop = '1px solid rgba(255,255,255,.05)';
+  tr.innerHTML = `
+    <td class="mono" style="color:#e2e8f0;font-weight:600">${r.ep}</td>
+    <td><span class="badge" style="background:rgba(255,255,255,.08);color:#cbd5e1">${r.method}</span></td>
+    <td class="mono text-center" style="color:#94a3b8">
+      <span style="color:#34d399">${r.ok}</span> / <span style="color:#f87171">${r.fail}</span>
+    </td>
+    <td class="text-center mono font-bold" style="color:${rc}">${r.rate.toFixed(1)}%</td>
+    <td class="mono text-right" style="color:#94a3b8">${r.min.toFixed(0)}</td>
+    <td class="mono text-right font-bold" style="color:#e2e8f0">${r.avg.toFixed(0)}</td>
+    <td class="mono text-right" style="color:#94a3b8">${r.med.toFixed(0)}</td>
+    <td class="mono text-right" style="color:#94a3b8">${r.p90.toFixed(0)}</td>
+    <td class="mono text-right" style="color:#fbbf24;font-weight:600">${r.p95.toFixed(0)}</td>
+    <td class="mono text-right" style="color:#f87171">${r.max.toFixed(0)}</td>
+    <td style="min-width:120px">${codes}</td>`;
+  tbody.appendChild(tr);
+});
+
+/* ── Errors table ───────────────────────────────────────────────────────── */
+if (ERRORS.length > 0) {
+  document.getElementById('errSection').classList.remove('hidden');
+  const et = document.getElementById('errTbody');
+  ERRORS.forEach(e => {
+    const tr = document.createElement('tr');
+    tr.style.borderTop = '1px solid rgba(255,255,255,.05)';
+    tr.innerHTML = `
+      <td style="color:#6b7280;padding:.5rem 1rem">${e.time}</td>
+      <td style="color:#fca5a5;padding:.5rem 1rem">${e.ep}</td>
+      <td style="color:#94a3b8;padding:.5rem 1rem">${e.method}</td>
+      <td style="color:#f87171;font-weight:700;padding:.5rem 1rem">${e.code||'Timeout'}</td>
+      <td style="color:#d1d5db;padding:.5rem 1rem;max-width:300px;overflow:hidden;
+                 text-overflow:ellipsis" title="${e.msg}">${e.msg}</td>`;
+    et.appendChild(tr);
+  });
+}
+
+/* ── Charts ─────────────────────────────────────────────────────────────── */
+const PALETTE = ['#34d399','#38bdf8','#818cf8','#fb923c','#f472b6',
+                  '#a78bfa','#22d3ee','#fbbf24','#86efac','#f87171'];
+
+new Chart(document.getElementById('chartLatency'), {
+  type: 'bar',
+  data: {
+    labels: ROWS.map(r => r.ep),
+    datasets: [
+      { label:'Avg (ms)',  data: ROWS.map(r=>r.avg), backgroundColor:'rgba(56,189,248,.55)',
+         borderColor:'#38bdf8', borderWidth:1, borderRadius:5 },
+      { label:'P95 (ms)',  data: ROWS.map(r=>r.p95), backgroundColor:'rgba(251,191,36,.55)',
+         borderColor:'#fbbf24', borderWidth:1, borderRadius:5 },
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ labels:{ color:'#9ca3af' } } },
+    scales:{
+      x:{ ticks:{ color:'#9ca3af' }, grid:{ display:false } },
+      y:{ ticks:{ color:'#9ca3af' }, grid:{ color:'#1f2937' },
+           title:{ display:true, text:'ms', color:'#9ca3af' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('chartDist'), {
+  type:'doughnut',
+  data:{
+    labels: ROWS.map(r => r.ep),
+    datasets:[{ data: ROWS.map(r=>r.total),
+      backgroundColor: PALETTE.slice(0, ROWS.length),
+      borderColor:'#080d13', borderWidth:3
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'right', labels:{ color:'#9ca3af', boxWidth:12 } } }
+  }
+});
+</script>
+</body>
+</html>

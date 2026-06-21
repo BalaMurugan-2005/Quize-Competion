@@ -1,0 +1,1052 @@
+[
+  {
+    "number": 1,
+    "round_num": 1,
+    "question": "Which part of the brain is most affected by addictive drugs, driving the cycle of craving and reward?",
+    "option_a": "Cerebellum",
+    "option_b": "Reward (dopamine) pathway",
+    "option_c": "Occipital lobe",
+    "option_d": "Spinal cord",
+    "correct_answer": "B"
+  },
+  {
+    "number": 2,
+    "round_num": 1,
+    "question": "What is the term for needing increasing amounts of a drug to get the same effect?",
+    "option_a": "Tolerance",
+    "option_b": "Withdrawal",
+    "option_c": "Relapse",
+    "option_d": "Detoxification",
+    "correct_answer": "A"
+  },
+  {
+    "number": 3,
+    "round_num": 1,
+    "question": "Which of the following is a common withdrawal symptom from opioid dependence?",
+    "option_a": "Improved appetite",
+    "option_b": "Muscle aches and nausea",
+    "option_c": "Better sleep",
+    "option_d": "Increased energy without rest",
+    "correct_answer": "B"
+  },
+  {
+    "number": 4,
+    "round_num": 1,
+    "question": "Alcohol primarily acts on the body as a:",
+    "option_a": "Anesthetic only",
+    "option_b": "Hallucinogen",
+    "option_c": "Depressant",
+    "option_d": "Stimulant",
+    "correct_answer": "C"
+  },
+  {
+    "number": 5,
+    "round_num": 1,
+    "question": "Long-term cannabis use during adolescence has been linked most strongly to problems with:",
+    "option_a": "Memory and learning",
+    "option_b": "Blood clotting",
+    "option_c": "Bone density",
+    "option_d": "Eyesight color perception",
+    "correct_answer": "A"
+  },
+  {
+    "number": 6,
+    "round_num": 1,
+    "question": "Which drug class includes LSD and psilocybin?",
+    "option_a": "Hallucinogens",
+    "option_b": "Opioids",
+    "option_c": "Stimulants",
+    "option_d": "Sedatives",
+    "correct_answer": "A"
+  },
+  {
+    "number": 7,
+    "round_num": 1,
+    "question": "Methamphetamine use is associated with severe dental damage commonly called:",
+    "option_a": "Gum flush",
+    "option_b": "Enamel bloom",
+    "option_c": "Tooth rot syndrome",
+    "option_d": "Meth mouth",
+    "correct_answer": "D"
+  },
+  {
+    "number": 8,
+    "round_num": 1,
+    "question": "Which organ is most directly damaged by chronic, heavy alcohol use?",
+    "option_a": "Thyroid",
+    "option_b": "Pancreas only",
+    "option_c": "Spleen",
+    "option_d": "Liver",
+    "correct_answer": "D"
+  },
+  {
+    "number": 9,
+    "round_num": 1,
+    "question": "Mixing alcohol with sedatives (like benzodiazepines) is dangerous mainly because both:",
+    "option_a": "Cause severe sunburn",
+    "option_b": "Raise blood sugar rapidly",
+    "option_c": "Suppress breathing and central nervous system",
+    "option_d": "Increase heart rate sharply",
+    "correct_answer": "C"
+  },
+  {
+    "number": 10,
+    "round_num": 1,
+    "question": "Nicotine is classified as a:",
+    "option_a": "Depressant",
+    "option_b": "Opioid",
+    "option_c": "Stimulant",
+    "option_d": "Hallucinogen",
+    "correct_answer": "C"
+  },
+  {
+    "number": 11,
+    "round_num": 1,
+    "question": "What is the main psychoactive chemical in cannabis?",
+    "option_a": "Terpene oil",
+    "option_b": "CBD",
+    "option_c": "THCA only",
+    "option_d": "THC",
+    "correct_answer": "D"
+  },
+  {
+    "number": 12,
+    "round_num": 1,
+    "question": "Cocaine primarily affects the brain by blocking the reabsorption of which neurotransmitter, causing a flood of it?",
+    "option_a": "GABA",
+    "option_b": "Dopamine",
+    "option_c": "Acetylcholine",
+    "option_d": "Serotonin only",
+    "correct_answer": "B"
+  },
+  {
+    "number": 13,
+    "round_num": 1,
+    "question": "'Overdose' refers to:",
+    "option_a": "Taking a drug exactly as prescribed",
+    "option_b": "Mixing two harmless substances",
+    "option_c": "Taking enough of a substance to cause a toxic, life-threatening reaction",
+    "option_d": "Skipping a dose",
+    "correct_answer": "C"
+  },
+  {
+    "number": 14,
+    "round_num": 1,
+    "question": "Naloxone (Narcan) is used to reverse the effects of which type of overdose?",
+    "option_a": "Opioid overdose",
+    "option_b": "Cannabis overdose",
+    "option_c": "Caffeine overdose",
+    "option_d": "Alcohol overdose",
+    "correct_answer": "A"
+  },
+  {
+    "number": 15,
+    "round_num": 1,
+    "question": "Which of these is a known short-term effect of stimulant misuse (e.g., cocaine, meth)?",
+    "option_a": "Drowsiness and slow heart rate",
+    "option_b": "Reduced blood pressure",
+    "option_c": "Increased heart rate and elevated body temperature",
+    "option_d": "Improved digestion",
+    "correct_answer": "C"
+  },
+  {
+    "number": 16,
+    "round_num": 1,
+    "question": "Fentanyl is dangerous in counterfeit pills primarily because it is:",
+    "option_a": "Slow-acting and mild",
+    "option_b": "Only dangerous when injected",
+    "option_c": "Extremely potent even in tiny amounts",
+    "option_d": "Non-addictive",
+    "correct_answer": "C"
+  },
+  {
+    "number": 17,
+    "round_num": 1,
+    "question": "Binge drinking is generally defined as drinking enough to raise blood alcohol concentration to what level in about two hours?",
+    "option_a": "0.08 g/dL or higher",
+    "option_b": "0.02 g/dL or higher",
+    "option_c": "There is no defined threshold",
+    "option_d": "0.001 g/dL or higher",
+    "correct_answer": "A"
+  },
+  {
+    "number": 18,
+    "round_num": 1,
+    "question": "Which of the following best describes 'physical dependence' on a substance?",
+    "option_a": "The body adapts so withdrawal symptoms occur without the drug",
+    "option_b": "Using a drug only once",
+    "option_c": "A medical condition unrelated to drug use",
+    "option_d": "A craving with no physical symptoms",
+    "correct_answer": "A"
+  },
+  {
+    "number": 19,
+    "round_num": 1,
+    "question": "Vaping nicotine products can deliver nicotine along with other harmful substances such as:",
+    "option_a": "Only water vapor",
+    "option_b": "Vitamin C",
+    "option_c": "Pure oxygen",
+    "option_d": "Heavy metals and chemical flavorings",
+    "correct_answer": "D"
+  },
+  {
+    "number": 20,
+    "round_num": 1,
+    "question": "Which of these substances is classified as a depressant?",
+    "option_a": "Cocaine",
+    "option_b": "Benzodiazepines",
+    "option_c": "MDMA",
+    "option_d": "Methamphetamine",
+    "correct_answer": "B"
+  },
+  {
+    "number": 21,
+    "round_num": 1,
+    "question": "MDMA ('ecstasy' or 'molly') is most associated with which risk during use in hot, crowded settings like raves?",
+    "option_a": "Excessive sleepiness",
+    "option_b": "Dangerous overheating (hyperthermia) and dehydration",
+    "option_c": "Hypothermia",
+    "option_d": "Improved hydration",
+    "correct_answer": "B"
+  },
+  {
+    "number": 22,
+    "round_num": 1,
+    "question": "Heroin belongs to which broad drug category?",
+    "option_a": "Opioid",
+    "option_b": "Inhalant",
+    "option_c": "Hallucinogen",
+    "option_d": "Stimulant",
+    "correct_answer": "A"
+  },
+  {
+    "number": 23,
+    "round_num": 1,
+    "question": "Which of the following is a sign of possible alcohol poisoning that requires emergency help?",
+    "option_a": "Slightly slurred speech only",
+    "option_b": "Unresponsiveness or vomiting while unconscious",
+    "option_c": "Mild yawning",
+    "option_d": "Feeling sleepy after one drink",
+    "correct_answer": "B"
+  },
+  {
+    "number": 24,
+    "round_num": 1,
+    "question": "Synthetic cannabinoids (e.g., 'K2' or 'Spice') are considered especially risky because they:",
+    "option_a": "Have well-tested, consistent dosing",
+    "option_b": "Have no effect on the brain",
+    "option_c": "Vary wildly in potency and chemical makeup, causing unpredictable effects",
+    "option_d": "Are identical to natural cannabis",
+    "correct_answer": "C"
+  },
+  {
+    "number": 25,
+    "round_num": 1,
+    "question": "Inhalant abuse (e.g., huffing aerosols or solvents) can cause sudden death due to:",
+    "option_a": "Excess hydration",
+    "option_b": "Increased lung capacity",
+    "option_c": "Heart rhythm disturbances ('sudden sniffing death')",
+    "option_d": "Improved oxygen flow",
+    "correct_answer": "C"
+  },
+  {
+    "number": 26,
+    "round_num": 1,
+    "question": "Which best describes 'polysubstance use'?",
+    "option_a": "Using only prescription medication as directed",
+    "option_b": "Drinking only water",
+    "option_c": "Quitting all substances at once",
+    "option_d": "Using two or more substances together or in close succession",
+    "correct_answer": "D"
+  },
+  {
+    "number": 27,
+    "round_num": 1,
+    "question": "Prescription stimulants (like Adderall) misused without a prescription are most often taken by students to try to:",
+    "option_a": "Improve focus or stay awake to study",
+    "option_b": "Cure a cold",
+    "option_c": "Lower blood pressure",
+    "option_d": "Treat allergies",
+    "correct_answer": "A"
+  },
+  {
+    "number": 28,
+    "round_num": 1,
+    "question": "Which statement about 'gateway drug' theory is most accurate in current public health discussion?",
+    "option_a": "Early substance use is one of several risk factors that may correlate with later use, but it isn't deterministic",
+    "option_b": "Trying any substance guarantees future addiction",
+    "option_c": "It only applies to alcohol",
+    "option_d": "It is universally proven for every individual",
+    "correct_answer": "A"
+  },
+  {
+    "number": 29,
+    "round_num": 1,
+    "question": "Caffeine overdose, while rare, can cause which of the following?",
+    "option_a": "Improved sleep quality",
+    "option_b": "Slowed breathing",
+    "option_c": "Rapid heartbeat and anxiety",
+    "option_d": "Lower body temperature",
+    "correct_answer": "C"
+  },
+  {
+    "number": 30,
+    "round_num": 1,
+    "question": "Which best explains why teens and young adults are especially vulnerable to addiction?",
+    "option_a": "Their brains, especially decision-making regions, are still developing",
+    "option_b": "Their brains are fully matured by age 15",
+    "option_c": "Addiction risk is identical at every age",
+    "option_d": "They cannot physically become addicted",
+    "correct_answer": "A"
+  },
+  {
+    "number": 31,
+    "round_num": 1,
+    "question": "A 'relapse' in addiction recovery refers to:",
+    "option_a": "A planned, supervised dose reduction",
+    "option_b": "Successfully completing treatment",
+    "option_c": "Starting treatment for the first time",
+    "option_d": "A return to substance use after a period of abstinence",
+    "correct_answer": "D"
+  },
+  {
+    "number": 32,
+    "round_num": 1,
+    "question": "Which of these is NOT a typical sign of substance use disorder?",
+    "option_a": "Continued use despite negative consequences",
+    "option_b": "Consistently improving grades and attendance",
+    "option_c": "Needing more of the substance over time",
+    "option_d": "Loss of interest in previously enjoyed activities",
+    "correct_answer": "B"
+  },
+  {
+    "number": 33,
+    "round_num": 1,
+    "question": "Drug-induced psychosis (e.g., from heavy stimulant or hallucinogen use) can include symptoms such as:",
+    "option_a": "Lower blood pressure",
+    "option_b": "Paranoia and hallucinations",
+    "option_c": "Better coordination",
+    "option_d": "Improved memory recall",
+    "correct_answer": "B"
+  },
+  {
+    "number": 34,
+    "round_num": 1,
+    "question": "Which of the following best describes 'detoxification' (detox)?",
+    "option_a": "A type of recreational drug",
+    "option_b": "The process of the body clearing a substance, often the first step in treatment",
+    "option_c": "A legal punishment for drug possession",
+    "option_d": "A method of getting high faster",
+    "correct_answer": "B"
+  },
+  {
+    "number": 35,
+    "round_num": 1,
+    "question": "Energy drinks combined with alcohol are risky mainly because caffeine can:",
+    "option_a": "Lower blood alcohol concentration",
+    "option_b": "Mask the feeling of intoxication, leading to more drinking",
+    "option_c": "Cancel out alcohol's effects completely",
+    "option_d": "Make alcohol non-addictive",
+    "correct_answer": "B"
+  },
+  {
+    "number": 36,
+    "round_num": 1,
+    "question": "Which best defines 'harm reduction' in a public health context?",
+    "option_a": "Strategies aimed at reducing negative health consequences of drug use without requiring abstinence",
+    "option_b": "Banning all addiction treatment",
+    "option_c": "Ignoring substance use entirely",
+    "option_d": "Punishing all drug use equally",
+    "correct_answer": "A"
+  },
+  {
+    "number": 37,
+    "round_num": 1,
+    "question": "Chronic stimulant misuse can lead to a crash phase commonly marked by:",
+    "option_a": "Improved appetite control",
+    "option_b": "Euphoria and high energy",
+    "option_c": "Heightened alertness",
+    "option_d": "Severe fatigue and depression",
+    "correct_answer": "D"
+  },
+  {
+    "number": 38,
+    "round_num": 1,
+    "question": "Why is sharing needles for drug injection particularly dangerous?",
+    "option_a": "It only affects taste of the drug",
+    "option_b": "It reduces overdose risk",
+    "option_c": "It has no health risks if cleaned with water",
+    "option_d": "It increases risk of HIV and hepatitis transmission",
+    "correct_answer": "D"
+  },
+  {
+    "number": 39,
+    "round_num": 1,
+    "question": "Which of the following is a long-term cognitive risk linked to heavy, regular alcohol use?",
+    "option_a": "Enhanced long-term memory",
+    "option_b": "Memory impairment and cognitive decline",
+    "option_c": "Permanently improved concentration",
+    "option_d": "No cognitive effects at any amount",
+    "correct_answer": "B"
+  },
+  {
+    "number": 40,
+    "round_num": 1,
+    "question": "Anabolic steroid misuse (non-medical use) is most associated with which risk?",
+    "option_a": "No physical health risks",
+    "option_b": "Improved natural hormone balance",
+    "option_c": "Hormonal imbalances and cardiovascular strain",
+    "option_d": "Increased life expectancy",
+    "correct_answer": "C"
+  },
+  {
+    "number": 41,
+    "round_num": 1,
+    "question": "Which best describes why fentanyl test strips are used in some harm-reduction programs?",
+    "option_a": "To replace medical treatment entirely",
+    "option_b": "To increase the potency of a drug",
+    "option_c": "To make drugs taste better",
+    "option_d": "To detect the presence of fentanyl in a substance before use",
+    "correct_answer": "D"
+  },
+  {
+    "number": 42,
+    "round_num": 1,
+    "question": "Which of the following is true about 'designer drugs' or novel psychoactive substances?",
+    "option_a": "They are tightly regulated for purity",
+    "option_b": "They have no addictive potential",
+    "option_c": "Their chemical makeup and effects are often unpredictable and not well studied",
+    "option_d": "They are always safer than traditional drugs",
+    "correct_answer": "C"
+  },
+  {
+    "number": 43,
+    "round_num": 1,
+    "question": "Which symptom is commonly associated with stimulant withdrawal rather than opioid withdrawal?",
+    "option_a": "Severe fatigue and low mood",
+    "option_b": "Muscle and bone pain",
+    "option_c": "Runny nose and watery eyes",
+    "option_d": "Goosebumps",
+    "correct_answer": "A"
+  },
+  {
+    "number": 44,
+    "round_num": 1,
+    "question": "What does 'CNS depressant' mean when describing a drug like alcohol or benzodiazepines?",
+    "option_a": "It is a vitamin supplement",
+    "option_b": "It only affects mood, not the body",
+    "option_c": "It slows down brain and body activity, including breathing and heart rate",
+    "option_d": "It speeds up brain and body activity",
+    "correct_answer": "C"
+  },
+  {
+    "number": 45,
+    "round_num": 1,
+    "question": "Which best describes why combining multiple depressants (e.g., alcohol and opioids) is especially dangerous?",
+    "option_a": "They cancel each other out safely",
+    "option_b": "Their effects on breathing can add up and cause respiratory failure",
+    "option_c": "They only affect digestion",
+    "option_d": "They have no combined effect",
+    "correct_answer": "B"
+  },
+  {
+    "number": 46,
+    "round_num": 2,
+    "question": "Which of the following is the most effective way to resist peer pressure to use drugs?",
+    "option_a": "Confidently say no and suggest an alternative activity",
+    "option_b": "Leave without explanation and never return",
+    "option_c": "Avoid the topic entirely and never respond",
+    "option_d": "Pretend to use the drug without anyone noticing",
+    "correct_answer": "A"
+  },
+  {
+    "number": 47,
+    "round_num": 2,
+    "question": "What is a 'protective factor' against substance abuse?",
+    "option_a": "A condition or trait that reduces the likelihood of drug use",
+    "option_b": "A withdrawal symptom",
+    "option_c": "A type of illegal drug",
+    "option_d": "A condition or trait that increases risk of drug use",
+    "correct_answer": "A"
+  },
+  {
+    "number": 48,
+    "round_num": 2,
+    "question": "Which of these is considered a healthy way to cope with academic stress instead of using substances?",
+    "option_a": "Isolating completely from friends and family",
+    "option_b": "Avoiding any form of help-seeking",
+    "option_c": "Regular exercise and talking to a counselor",
+    "option_d": "Skipping all meals and sleep",
+    "correct_answer": "C"
+  },
+  {
+    "number": 49,
+    "round_num": 2,
+    "question": "Strong family and community support is best described as a:",
+    "option_a": "Risk factor for drug use",
+    "option_b": "Form of withdrawal",
+    "option_c": "Symptom of addiction",
+    "option_d": "Protective factor against drug use",
+    "correct_answer": "D"
+  },
+  {
+    "number": 50,
+    "round_num": 2,
+    "question": "Which strategy is most recommended for refusing drugs at a party while keeping the friendship?",
+    "option_a": "Agree just this once to avoid conflict",
+    "option_b": "Avoid the friend permanently with no explanation",
+    "option_c": "Lecture the friend about the dangers of drugs at length",
+    "option_d": "Make an excuse and offer to do something else together",
+    "correct_answer": "D"
+  },
+  {
+    "number": 51,
+    "round_num": 2,
+    "question": "Peer support groups for substance abuse recovery, like 12-step programs, primarily help by:",
+    "option_a": "Guaranteeing instant recovery",
+    "option_b": "Replacing all medical treatment",
+    "option_c": "Providing free unlimited medication",
+    "option_d": "Providing community, accountability, and shared experience",
+    "correct_answer": "D"
+  },
+  {
+    "number": 52,
+    "round_num": 2,
+    "question": "What is the best first step if you suspect a friend has a substance use problem?",
+    "option_a": "Confront them publicly in front of others",
+    "option_b": "Talk to them privately with empathy and encourage professional help",
+    "option_c": "Ignore it and hope it resolves itself",
+    "option_d": "Immediately cut off all contact",
+    "correct_answer": "B"
+  },
+  {
+    "number": 53,
+    "round_num": 2,
+    "question": "Which of the following best supports prevention of substance abuse on college campuses?",
+    "option_a": "Encouraging secrecy around substance use",
+    "option_b": "Easy access to alcohol with no restrictions",
+    "option_c": "Removing all health services",
+    "option_d": "Education programs, counseling services, and substance-free social events",
+    "correct_answer": "D"
+  },
+  {
+    "number": 54,
+    "round_num": 2,
+    "question": "A designated driver program is an example of:",
+    "option_a": "A type of drug treatment medication",
+    "option_b": "A harm-reduction and prevention strategy",
+    "option_c": "A risk factor for substance misuse",
+    "option_d": "A legal penalty",
+    "correct_answer": "B"
+  },
+  {
+    "number": 55,
+    "round_num": 2,
+    "question": "Which of these is an example of a healthy boundary when dealing with substance use around you?",
+    "option_a": "Pretending you don't have any boundaries",
+    "option_b": "Avoiding all social situations forever",
+    "option_c": "Letting others pressure you into using despite discomfort",
+    "option_d": "Clearly stating your limits and leaving situations that make you uncomfortable",
+    "correct_answer": "D"
+  },
+  {
+    "number": 56,
+    "round_num": 2,
+    "question": "Which of the following best describes 'refusal skills'?",
+    "option_a": "A medical treatment for addiction",
+    "option_b": "Strategies and communication techniques for saying no to unwanted offers",
+    "option_c": "A symptom of substance use disorder",
+    "option_d": "Techniques for accepting peer pressure gracefully",
+    "correct_answer": "B"
+  },
+  {
+    "number": 57,
+    "round_num": 2,
+    "question": "Why is having a trusted adult or mentor considered protective for young people?",
+    "option_a": "They have no influence on decision-making",
+    "option_b": "They increase exposure to risky behavior",
+    "option_c": "They replace the need for friendships",
+    "option_d": "They can provide guidance, support, and accountability",
+    "correct_answer": "D"
+  },
+  {
+    "number": 58,
+    "round_num": 2,
+    "question": "Which of these activities is most likely to reduce risk of substance misuse among college students?",
+    "option_a": "Joining clubs, sports, or volunteer groups",
+    "option_b": "Avoiding any extracurricular involvement",
+    "option_c": "Spending unstructured time alone with easy access to substances",
+    "option_d": "Isolating from campus resources",
+    "correct_answer": "A"
+  },
+  {
+    "number": 59,
+    "round_num": 2,
+    "question": "What does it mean to be an 'active bystander' in a situation involving substance misuse?",
+    "option_a": "Ignoring the situation completely",
+    "option_b": "Stepping in safely to help, such as calling for medical help or alerting staff",
+    "option_c": "Encouraging more substance use",
+    "option_d": "Recording the event for social media",
+    "correct_answer": "B"
+  },
+  {
+    "number": 60,
+    "round_num": 2,
+    "question": "Which of the following best reduces the stigma around seeking help for addiction?",
+    "option_a": "Treating addiction as a moral failure",
+    "option_b": "Framing addiction as a treatable health condition and encouraging open conversation",
+    "option_c": "Punishing people who ask for help",
+    "option_d": "Avoiding the topic of addiction altogether",
+    "correct_answer": "B"
+  },
+  {
+    "number": 61,
+    "round_num": 2,
+    "question": "A 'safety plan' before attending a party with potential substance exposure might include:",
+    "option_a": "Having a trusted friend, a way home, and a check-in plan",
+    "option_b": "Accepting all drinks offered without question",
+    "option_c": "Leaving your phone at home",
+    "option_d": "Going alone with no way to leave",
+    "correct_answer": "A"
+  },
+  {
+    "number": 62,
+    "round_num": 2,
+    "question": "Which of the following is a sign of effective stress management that reduces substance use risk?",
+    "option_a": "Practicing mindfulness, exercise, or talking to someone you trust",
+    "option_b": "Isolating from all support systems",
+    "option_c": "Avoiding sleep to stay busy",
+    "option_d": "Bottling up all emotions indefinitely",
+    "correct_answer": "A"
+  },
+  {
+    "number": 63,
+    "round_num": 2,
+    "question": "Motivational interviewing, often used in counseling, is designed to:",
+    "option_a": "Replace all medical treatment",
+    "option_b": "Help a person explore their own motivation for changing substance use behavior",
+    "option_c": "Force someone into treatment against their will",
+    "option_d": "Punish relapse",
+    "correct_answer": "B"
+  },
+  {
+    "number": 64,
+    "round_num": 2,
+    "question": "Which best describes a 'risk factor' for substance abuse?",
+    "option_a": "A type of medication used in treatment",
+    "option_b": "A condition, such as untreated trauma or lack of support, that increases likelihood of drug use",
+    "option_c": "A condition that lowers the likelihood of drug use",
+    "option_d": "A legal protection against prosecution",
+    "correct_answer": "B"
+  },
+  {
+    "number": 65,
+    "round_num": 2,
+    "question": "What is the value of campus counseling centers in substance abuse prevention?",
+    "option_a": "They only handle academic issues",
+    "option_b": "They have no role in student wellbeing",
+    "option_c": "They exist only to enforce discipline",
+    "option_d": "They provide confidential support, education, and referrals to treatment",
+    "correct_answer": "D"
+  },
+  {
+    "number": 66,
+    "round_num": 2,
+    "question": "Which response best models supporting a friend who just disclosed they're struggling with addiction?",
+    "option_a": "Avoiding them from then on",
+    "option_b": "'That's your problem, deal with it alone.'",
+    "option_c": "Telling everyone else without their consent",
+    "option_d": "'I'm here for you, let's figure out support together.'",
+    "correct_answer": "D"
+  },
+  {
+    "number": 67,
+    "round_num": 2,
+    "question": "Which of these best illustrates a refusal skill called 'broken record'?",
+    "option_a": "Repeating a calm, firm 'no' regardless of pressure",
+    "option_b": "Avoiding eye contact and walking away silently",
+    "option_c": "Changing your answer to avoid conflict",
+    "option_d": "Giving a long explanation each time you're asked",
+    "correct_answer": "A"
+  },
+  {
+    "number": 68,
+    "round_num": 2,
+    "question": "Why are substance-free housing options on some campuses considered a prevention tool?",
+    "option_a": "They replace mental health services",
+    "option_b": "They eliminate the need for any rules",
+    "option_c": "They reduce exposure and peer pressure related to substance use in living spaces",
+    "option_d": "They guarantee no one will ever use substances anywhere",
+    "correct_answer": "C"
+  },
+  {
+    "number": 69,
+    "round_num": 2,
+    "question": "Which of these best describes 'self-efficacy' in the context of resisting substance use?",
+    "option_a": "Confidence in your own ability to resist pressure and make healthy choices",
+    "option_b": "A medical term for withdrawal",
+    "option_c": "Relying entirely on others to make decisions for you",
+    "option_d": "Believing you have no control over your choices",
+    "correct_answer": "A"
+  },
+  {
+    "number": 70,
+    "round_num": 2,
+    "question": "What role do social norms campaigns (e.g., correcting myths about 'everyone drinks heavily') play in prevention?",
+    "option_a": "They exaggerate substance use to scare students",
+    "option_b": "They correct misperceptions, since students often overestimate how much peers actually use",
+    "option_c": "They promote substance use as normal",
+    "option_d": "They have no measurable effect",
+    "correct_answer": "B"
+  },
+  {
+    "number": 71,
+    "round_num": 2,
+    "question": "Which is the best example of assertive (not aggressive or passive) communication when declining drugs?",
+    "option_a": "Quietly going along with the offer to avoid awkwardness",
+    "option_b": "Calmly and directly saying 'No thanks, I'm not interested' while maintaining eye contact",
+    "option_c": "Avoiding the person without ever responding",
+    "option_d": "Yelling and insulting the person offering",
+    "correct_answer": "B"
+  },
+  {
+    "number": 72,
+    "round_num": 2,
+    "question": "Which of the following best supports recovery after completing substance abuse treatment?",
+    "option_a": "Returning immediately to all previous social environments and habits",
+    "option_b": "Ongoing support such as therapy, support groups, and healthy routines",
+    "option_c": "Avoiding any structure or accountability",
+    "option_d": "Stopping all contact with support systems",
+    "correct_answer": "B"
+  },
+  {
+    "number": 73,
+    "round_num": 2,
+    "question": "Why is early intervention important when a young person shows signs of substance misuse?",
+    "option_a": "It is only useful after addiction is severe",
+    "option_b": "It has no effect on long-term outcomes",
+    "option_c": "It guarantees the person will never use substances again",
+    "option_d": "It can reduce the severity and duration of substance use problems",
+    "correct_answer": "D"
+  },
+  {
+    "number": 74,
+    "round_num": 2,
+    "question": "Which of the following is an example of a positive alternative activity often promoted in prevention programs?",
+    "option_a": "Sports, arts, music, or volunteer programs",
+    "option_b": "Easy access to substances at events",
+    "option_c": "Encouraging isolation from peers",
+    "option_d": "Unsupervised free time with no structure",
+    "correct_answer": "A"
+  },
+  {
+    "number": 75,
+    "round_num": 2,
+    "question": "What is the purpose of a 'good Samaritan' policy related to substance use on campuses?",
+    "option_a": "To require mandatory expulsion for any substance use",
+    "option_b": "To eliminate the need for emergency services",
+    "option_c": "To encourage people to call for medical help without fear of punishment for minor violations",
+    "option_d": "To punish anyone who calls for help during an overdose",
+    "correct_answer": "C"
+  },
+  {
+    "number": 76,
+    "round_num": 2,
+    "question": "Which best explains why building strong friendships with non-using peers helps prevent substance misuse?",
+    "option_a": "It only matters for younger children",
+    "option_b": "It guarantees total isolation from all substances",
+    "option_c": "Supportive social networks reduce exposure to pressure and provide healthier outlets",
+    "option_d": "It has no real impact on behavior",
+    "correct_answer": "C"
+  },
+  {
+    "number": 77,
+    "round_num": 2,
+    "question": "Which of these best reflects a proactive (not just reactive) approach to substance abuse prevention?",
+    "option_a": "Punishing only after severe harm occurs",
+    "option_b": "Providing education and resources before problems develop",
+    "option_c": "Ignoring early warning signs",
+    "option_d": "Waiting until a crisis happens to respond",
+    "correct_answer": "B"
+  },
+  {
+    "number": 78,
+    "round_num": 2,
+    "question": "Which best describes the role of family communication in prevention of substance abuse among young adults?",
+    "option_a": "Avoiding the topic with family is the most effective method",
+    "option_b": "Family communication has no measurable effect",
+    "option_c": "Open, honest communication can lower risk by building trust and awareness",
+    "option_d": "Family involvement increases risk of substance use",
+    "correct_answer": "C"
+  },
+  {
+    "number": 79,
+    "round_num": 2,
+    "question": "Why might setting personal goals (academic, career, fitness) help reduce substance misuse risk?",
+    "option_a": "Goals have no relationship to behavior",
+    "option_b": "Setting goals increases stress and risk",
+    "option_c": "Goals only matter for athletes",
+    "option_d": "Goals provide motivation and a sense of purpose that compete with substance use",
+    "correct_answer": "D"
+  },
+  {
+    "number": 80,
+    "round_num": 2,
+    "question": "Which is the most appropriate action if you witness someone showing signs of an overdose?",
+    "option_a": "Call emergency services immediately and stay with them if safe to do so",
+    "option_b": "Leave the scene to avoid trouble",
+    "option_c": "Wait to see if symptoms improve on their own",
+    "option_d": "Give them more of the same substance",
+    "correct_answer": "A"
+  },
+  {
+    "number": 81,
+    "round_num": 3,
+    "question": "In the United States, the federal law that classifies controlled substances into Schedules I-V is called the:",
+    "option_a": "Affordable Care Act",
+    "option_b": "Clean Air Act",
+    "option_c": "Fair Housing Act",
+    "option_d": "Controlled Substances Act",
+    "correct_answer": "D"
+  },
+  {
+    "number": 82,
+    "round_num": 3,
+    "question": "A Schedule I drug under U.S. federal law is generally defined as having:",
+    "option_a": "No accepted medical use and high potential for abuse",
+    "option_b": "Only mild legal restrictions",
+    "option_c": "Low abuse potential and wide medical use",
+    "option_d": "No regulation at all",
+    "correct_answer": "A"
+  },
+  {
+    "number": 83,
+    "round_num": 3,
+    "question": "The legal minimum drinking age in the United States is:",
+    "option_a": "There is no federal minimum",
+    "option_b": "18",
+    "option_c": "21",
+    "option_d": "16",
+    "correct_answer": "C"
+  },
+  {
+    "number": 84,
+    "round_num": 3,
+    "question": "'DUI' or 'DWI' laws primarily address:",
+    "option_a": "Underage employment",
+    "option_b": "Property disputes",
+    "option_c": "Driving under the influence of alcohol or drugs",
+    "option_d": "Tax evasion",
+    "correct_answer": "C"
+  },
+  {
+    "number": 85,
+    "round_num": 3,
+    "question": "Which U.S. federal agency is primarily responsible for enforcing controlled substance laws?",
+    "option_a": "FEMA",
+    "option_b": "IRS",
+    "option_c": "Drug Enforcement Administration (DEA)",
+    "option_d": "FBI only",
+    "correct_answer": "C"
+  },
+  {
+    "number": 86,
+    "round_num": 3,
+    "question": "Many college campuses are required to address drug and alcohol prevention under which type of federal requirement?",
+    "option_a": "Only state tax codes",
+    "option_b": "Copyright law",
+    "option_c": "Drug-Free Schools and Communities Act provisions",
+    "option_d": "International trade law",
+    "correct_answer": "C"
+  },
+  {
+    "number": 87,
+    "round_num": 3,
+    "question": "Possession of a controlled substance without legal authorization is generally classified as:",
+    "option_a": "Always a minor infraction with no penalty",
+    "option_b": "A purely civil matter with no criminal consequence",
+    "option_c": "A criminal offense, with penalties varying by substance and amount",
+    "option_d": "Legal in all U.S. states",
+    "correct_answer": "C"
+  },
+  {
+    "number": 88,
+    "round_num": 3,
+    "question": "'Good Samaritan' or '911 Good Samaritan' laws in many U.S. states are designed to:",
+    "option_a": "Provide limited legal protection to those who seek help during an overdose",
+    "option_b": "Eliminate the need for emergency response",
+    "option_c": "Increase penalties for calling 911 during an overdose",
+    "option_d": "Apply only to alcohol-related incidents",
+    "correct_answer": "A"
+  },
+  {
+    "number": 89,
+    "round_num": 3,
+    "question": "Driving with an open container of alcohol in the passenger area of a vehicle is, in most U.S. states:",
+    "option_a": "Only illegal for drivers under 18",
+    "option_b": "Prohibited under open container laws",
+    "option_c": "Regulated only by federal law",
+    "option_d": "Fully legal with no restriction",
+    "correct_answer": "B"
+  },
+  {
+    "number": 90,
+    "round_num": 3,
+    "question": "Which best describes the legal status of cannabis at the U.S. federal level as of recent years, even where some states have legalized it?",
+    "option_a": "It was removed from all drug schedules",
+    "option_b": "It is legal only for export",
+    "option_c": "Fully legal nationwide with no restrictions",
+    "option_d": "It remains a controlled substance under federal law despite varying state laws",
+    "correct_answer": "D"
+  },
+  {
+    "number": 91,
+    "round_num": 3,
+    "question": "Workplace drug testing policies are generally implemented to:",
+    "option_a": "Violate employee rights with no legal basis",
+    "option_b": "Replace all other safety measures",
+    "option_c": "Apply only to volunteers",
+    "option_d": "Promote safety and comply with applicable workplace regulations",
+    "correct_answer": "D"
+  },
+  {
+    "number": 92,
+    "round_num": 3,
+    "question": "Selling or distributing illegal drugs to a minor typically results in:",
+    "option_a": "Enhanced or more severe legal penalties in many jurisdictions",
+    "option_b": "No legal consequence",
+    "option_c": "Reduced penalties compared to selling to adults",
+    "option_d": "Only a warning",
+    "correct_answer": "A"
+  },
+  {
+    "number": 93,
+    "round_num": 3,
+    "question": "'Diversion programs' in the criminal justice system related to drug offenses are designed to:",
+    "option_a": "Guarantee incarceration for all offenders",
+    "option_b": "Eliminate any consequences for drug offenses",
+    "option_c": "Apply only to violent crimes",
+    "option_d": "Redirect eligible individuals toward treatment and rehabilitation instead of traditional prosecution",
+    "correct_answer": "D"
+  },
+  {
+    "number": 94,
+    "round_num": 3,
+    "question": "Under U.S. law, a prescription medication used without a valid prescription or differently than prescribed is considered:",
+    "option_a": "Illegal use, even though the substance itself is legal with a valid prescription",
+    "option_b": "Always legal since it's an approved medication",
+    "option_c": "Only illegal if sold, never if personally used",
+    "option_d": "Regulated the same as over-the-counter drugs",
+    "correct_answer": "A"
+  },
+  {
+    "number": 95,
+    "round_num": 3,
+    "question": "The legal concept of 'zero tolerance' in some school and workplace drug policies means:",
+    "option_a": "Only the most severe cases are addressed",
+    "option_b": "It applies only to alcohol, not other drugs",
+    "option_c": "Violations are ignored unless repeated",
+    "option_d": "Any detected violation results in defined, often strict, consequences regardless of amount",
+    "correct_answer": "D"
+  },
+  {
+    "number": 96,
+    "round_num": 3,
+    "question": "Which of the following best describes the purpose of drug courts in some jurisdictions?",
+    "option_a": "To eliminate due process",
+    "option_b": "To handle only juvenile traffic violations",
+    "option_c": "To offer treatment-focused alternatives to incarceration for eligible non-violent drug offenders",
+    "option_d": "To increase prison sentences for drug offenses",
+    "correct_answer": "C"
+  },
+  {
+    "number": 97,
+    "round_num": 3,
+    "question": "International drug control treaties, such as those coordinated through the United Nations, primarily aim to:",
+    "option_a": "Apply only within a single country",
+    "option_b": "Promote unrestricted global trade of controlled substances",
+    "option_c": "Coordinate international efforts to control and regulate scheduled substances",
+    "option_d": "Have no influence on national drug laws",
+    "correct_answer": "C"
+  },
+  {
+    "number": 98,
+    "round_num": 3,
+    "question": "Which of the following is typically true regarding penalties for drug trafficking versus simple possession?",
+    "option_a": "Trafficking generally carries more severe penalties than simple possession",
+    "option_b": "Possession always carries harsher penalties than trafficking",
+    "option_c": "Both carry identical penalties everywhere",
+    "option_d": "Neither carries any legal penalty",
+    "correct_answer": "A"
+  },
+  {
+    "number": 99,
+    "round_num": 3,
+    "question": "A 'controlled substance analogue' law is intended to address:",
+    "option_a": "Chemically similar substances designed to mimic illegal drugs while attempting to evade existing laws",
+    "option_b": "Only substances used in medical research",
+    "option_c": "Drugs identical in every way to legal substances",
+    "option_d": "Substances with no psychoactive effect",
+    "correct_answer": "A"
+  },
+  {
+    "number": 100,
+    "round_num": 3,
+    "question": "Campus disciplinary policies for substance violations typically exist:",
+    "option_a": "Only for athletic team members",
+    "option_b": "Independently of, and in addition to, any criminal legal consequences",
+    "option_c": "Only in graduate programs",
+    "option_d": "As a full replacement for criminal law",
+    "correct_answer": "B"
+  },
+  {
+    "number": 101,
+    "round_num": 3,
+    "question": "Which of the following best describes 'expungement' as it relates to certain past drug offenses?",
+    "option_a": "A requirement to repeat the offense",
+    "option_b": "A type of harsher sentencing",
+    "option_c": "A process that can legally seal or clear eligible criminal records under specific conditions",
+    "option_d": "A federal ban on all future employment",
+    "correct_answer": "C"
+  },
+  {
+    "number": 102,
+    "round_num": 3,
+    "question": "Public health policies promoting needle exchange programs are generally intended to:",
+    "option_a": "Increase overdose rates",
+    "option_b": "Encourage more drug use",
+    "option_c": "Replace law enforcement entirely",
+    "option_d": "Reduce the spread of bloodborne diseases like HIV and hepatitis",
+    "correct_answer": "D"
+  },
+  {
+    "number": 103,
+    "round_num": 3,
+    "question": "Which statement best reflects how drug laws can vary across U.S. states?",
+    "option_a": "All states have identical drug laws and penalties",
+    "option_b": "Only federal law applies; states have no authority",
+    "option_c": "States can have different laws and penalties for certain substances, alongside federal law",
+    "option_d": "State laws apply only to minors",
+    "correct_answer": "C"
+  },
+  {
+    "number": 104,
+    "round_num": 3,
+    "question": "Mandatory minimum sentencing laws for certain drug offenses are designed to:",
+    "option_a": "Allow judges complete discretion with no guidelines",
+    "option_b": "Apply only to first-time non-violent offenders automatically",
+    "option_c": "Eliminate sentencing for drug crimes",
+    "option_d": "Require a fixed minimum prison term for specific offenses regardless of individual circumstances",
+    "correct_answer": "D"
+  },
+  {
+    "number": 105,
+    "round_num": 3,
+    "question": "Which best describes the legal responsibility a host may have under 'social host liability' laws if they knowingly provide alcohol to minors?",
+    "option_a": "Liability applies only to licensed businesses, never private individuals",
+    "option_b": "They can be held legally liable for harm resulting from underage drinking on their property",
+    "option_c": "These laws apply only outside the United States",
+    "option_d": "They face no responsibility under any circumstances",
+    "correct_answer": "B"
+  }
+]
